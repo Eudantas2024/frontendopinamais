@@ -1,0 +1,261 @@
+:root {
+  --cor-primaria: #007bff;
+  --cor-secundaria: #6c757d;
+  --cor-sucesso: #28a745;
+  --cor-erro: #dc3545;
+  --cor-fundo-claro: #f8f9fa;
+  --cor-card-fundo: #ffffff;
+  --cor-borda: #dee2e6;
+  --cor-sombra-leve: rgba(0, 0, 0, 0.1);
+  --cor-sombra-media: rgba(0, 0, 0, 0.2);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  /* Ajusta para a altura da tela menos o menu superior */
+  background-color: var(--cor-fundo-claro);
+  padding: 20px;
+  box-sizing: border-box;
+  /* Inclui padding na largura total */
+}
+
+.login-container h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 30px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.login-container p {
+  color: var(--cor-secundaria);
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/* Estilos para o formulário */
+.login-container form {
+  background-color: #e9ecef;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--cor-sombra-leve);
+  width: 100%;
+  max-width: 450px;
+  /* Largura máxima do formulário */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* Espaçamento entre os elementos do formulário */
+}
+
+.login-container label {
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 5px;
+  display: block;
+  /* Garante que a label fique em sua própria linha */
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  /* Inclui padding na largura total */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.senha-container {
+  position: relative;
+  width: 100%;
+}
+
+.senha-container input {
+  padding-right: 40px;
+  /* Espaço para o botão de mostrar/esconder */
+}
+
+.mostrar-senha-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 5px;
+  line-height: 1;
+  /* Alinha o emoji/ícone */
+  color: var(--cor-secundaria);
+  transition: color 0.2s ease;
+}
+
+.mostrar-senha-btn:hover {
+  color: #343a40;
+}
+
+.btn-entrar {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-entrar:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Mensagens de feedback */
+.sucesso {
+  color: var(--cor-sucesso);
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 1px solid var(--cor-sucesso);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.erro {
+  color: var(--cor-erro);
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid var(--cor-erro);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+/* Estilos para a seleção de tipo de login */
+.opcoes-login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--cor-card-fundo);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--cor-sombra-leve);
+}
+
+.opcao-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--cor-primaria);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opcao-btn:hover {
+  background-color: var(--cor-primaria);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px var(--cor-sombra-leve);
+}
+
+.opcao-icon {
+  font-size: 1.8em;
+}
+
+.opcao-btn.cliente {
+  border-color: var(--cor-sucesso);
+  /* Exemplo: borda verde para cliente */
+  color: var(--cor-sucesso);
+}
+
+.opcao-btn.cliente:hover {
+  background-color: var(--cor-sucesso);
+  color: white;
+}
+
+.opcao-btn.empresa {
+  border-color: #ff9800;
+  /* Exemplo: borda laranja para empresa */
+  color: #ff9800;
+}
+
+.opcao-btn.empresa:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+
+.voltar-btn {
+  background: none;
+  border: none;
+  color: var(--cor-secundaria);
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  /* Alinha o botão "Voltar" à esquerda do formulário */
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.voltar-btn:hover {
+  color: #343a40;
+  background-color: #e9ecef;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+  .login-container,
+  .login-container form,
+  .opcoes-login {
+    padding: 20px;
+    margin: 10px;
+    background-color: #e9ecef;
+  }
+
+  .login-container h2 {
+    font-size: 1.8em;
+  }
+
+  .opcao-btn {
+    font-size: 1.1em;
+    padding: 15px;
+  }
+
+  .opcao-icon {
+    font-size: 1.5em;
+  }
+}

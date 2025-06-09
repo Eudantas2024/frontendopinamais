@@ -1,0 +1,74 @@
+.main-footer {
+  display: flex;
+  justify-content: center; /* centraliza as 3 colunas no meio */
+  align-items: flex-start;
+  background-color: #2a80d1;
+  color: #fff;
+  padding: 60px 40px;
+  gap: 60px; /* espaço entre as colunas */
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 250px; /* largura mínima de cada coluna */
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+/* Ícones de redes sociais alinhados horizontalmente */
+.social-icons {
+  display: flex;
+  padding-top: 3rem;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.9rem;
+  gap: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.logoopina {
+  width: 185px;
+  margin-bottom: 10px;
+}
+
+
+.cadastro-container2 {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px 90px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ccc;
+}

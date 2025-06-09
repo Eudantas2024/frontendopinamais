@@ -1,0 +1,40 @@
+.painel-cliente {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.lista-envios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-envio {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  transition: transform 0.2s;
+}
+
+.card-envio:hover {
+  transform: scale(1.01);
+}
+
+.card-envio .status {
+  font-weight: bold;
+  color: #004aad;
+}
+
+.status-resolvido {
+  border-left: 5px solid green;
+}
+
+.status-em\ análise {
+  border-left: 5px solid orange;
+}
+
+.status-pendente {
+  border-left: 5px solid red;
+}

@@ -1,0 +1,41 @@
+
+.container {
+  font-family: 'Arial', sans-serif;
+ 
+  width: 900px;
+  padding: 1rem 5rem;
+  margin: auto;
+  color: #343a40;
+  text-align: center;
+  background-color: #f8f9fa;
+  /* Cor de fundo suave */
+}
+
+.blog{
+  padding: 1rem 4rem;
+}
+
+img{
+  width: 550px;
+  padding-top: 0.2rem;
+  padding-bottom: rem;
+}
+
+h2 {
+  margin-top: 0;
+  padding-top: 0;
+   font-size: 1.3rem;
+}
+
+p {
+  font-size: 1.11rem;
+     line-height: 1.8; 
+     text-align: left;
+}
+
+
+.logo2 {
+  padding: 1rem;
+  width: 300px;
+  margin-bottom: 0;
+}

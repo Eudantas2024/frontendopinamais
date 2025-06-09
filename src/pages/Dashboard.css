@@ -1,0 +1,226 @@
+/* Cores base */
+:root {
+  --cor-primaria: #007bff;
+  /* Azul vibrante, para elementos principais */
+  --cor-secundaria: #6c757d;
+  /* Cinza escuro, para textos secundários */
+  --cor-sucesso: #28a745;
+  /* Verde para resolvido */
+  --cor-aviso: #ffc107;
+  /* Amarelo para pendente (revisado de laranja para um tom mais suave) */
+  --cor-fundo-claro: #f8f9fa;
+  /* Fundo geral da página */
+  --cor-card-fundo: #ffffff;
+  /* Fundo dos cards */
+  --cor-borda: #dee2e6;
+  /* Borda sutil */
+  --cor-sombra-leve: rgba(0, 0, 0, 0.08);
+  /* Sombra para profundidade */
+  --cor-sombra-media: rgba(0, 0, 0, 0.15);
+  /* Sombra para hover */
+}
+
+/* Container principal do Dashboard */
+.dashboard-container {
+  padding: 30px;
+  background-color: var(--cor-fundo-claro);
+  min-height: calc(100vh - 60px);
+  /* Ajusta para a altura da tela menos o menu superior (se houver) */
+  font-family: 'Arial', sans-serif;
+  color: #343a40;
+  /* Cor de texto padrão */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Título do Painel */
+.dashboard-container h2 {
+  color: var(--cor-primaria);
+  /* Cor do título */
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  /* Para a linha decorativa */
+  padding-bottom: 15px;
+}
+
+.dashboard-container h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background-color: var(--cor-sucesso);
+  /* Linha decorativa abaixo do título */
+  border-radius: 2px;
+}
+
+
+/* Estilo para o container do gráfico */
+.grafico-container {
+  background-color: var(--cor-card-fundo);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--cor-sombra-leve);
+  padding: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  /* Limita a largura do gráfico */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grafico-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--cor-sombra-media);
+}
+
+/* Estilo para a lista de reclamações */
+.lista-reclamacoes {
+  display: grid;
+  /* Usa Grid para organizar os cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Colunas responsivas */
+  gap: 25px;
+  /* Espaçamento entre os cards */
+  width: 100%;
+  max-width: 1200px;
+  /* Largura máxima da grade de cards */
+  padding: 0 20px;
+  /* Padding nas laterais */
+}
+
+/* Estilo para cada card de reclamação */
+.card {
+  background-color: var(--cor-card-fundo);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--cor-sombra-leve);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-left: 5px solid transparent;
+  /* Para a borda de status */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Espaço entre header, cliente e data */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px var(--cor-sombra-media);
+}
+
+/* Borda lateral do card baseada no status */
+.card .status.resolvido+& {
+  /* Isso não funciona assim no CSS puro. Ver abaixo uma solução JS/React */
+  border-left-color: var(--cor-sucesso);
+}
+
+.card .status.pendente+& {
+  /* Isso não funciona assim no CSS puro. Ver abaixo uma solução JS/React */
+  border-left-color: var(--cor-aviso);
+}
+
+/* Solução CSS alternativa para a borda do card baseada no status (no React, adicione a classe ao card) */
+.card.status-resolvido {
+  border-left-color: var(--cor-sucesso);
+}
+
+.card.status-pendente {
+  border-left-color: var(--cor-aviso);
+}
+
+
+/* Cabeçalho do Card */
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--cor-borda);
+  /* Linha tracejada */
+}
+
+.card-header .icon {
+  font-size: 1.8em;
+  margin-right: 15px;
+  color: var(--cor-primaria);
+  /* Cor do ícone FaBell */
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3em;
+  color: #495057;
+  flex-grow: 1;
+  /* Ocupa o espaço restante */
+}
+
+/* Estilo do Status */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* Espaço entre o ícone e o texto */
+}
+
+.status.resolvido {
+  background-color: rgba(40, 167, 69, 0.15);
+  /* Fundo com pouca opacidade */
+  color: var(--cor-sucesso);
+}
+
+.status.pendente {
+  background-color: rgba(255, 193, 7, 0.15);
+  /* Fundo com pouca opacidade */
+  color: var(--cor-aviso);
+}
+
+.status svg {
+  /* Ícones de status */
+  font-size: 1em;
+}
+
+/* Detalhes do Card (Cliente e Data) */
+.card p {
+  margin-bottom: 8px;
+  color: var(--cor-secundaria);
+  font-size: 0.95em;
+}
+
+.card p strong {
+  color: #343a40;
+}
+
+.card p small {
+  display: block;
+  /* Garante que a data fique em sua própria linha */
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #959da6;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .lista-reclamacoes {
+    grid-template-columns: 1fr;
+    /* Uma única coluna em telas menores */
+    padding: 0 10px;
+  }
+}

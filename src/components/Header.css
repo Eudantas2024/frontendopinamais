@@ -1,0 +1,129 @@
+.main-header {
+  background-color: #002c4b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(135deg, #10c218, #0004ff);
+  z-index: 1000;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+
+
+  /* Novo: limitar largura e centralizar */
+
+}
+
+
+/* Três colunas horizontais */
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Centralização */
+.header-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.header-left {
+  flex: 0;
+}
+
+.header-right {
+  flex: 0;
+  gap: 10px;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+/* Logo */
+.logo-link {
+  text-decoration: none;
+}
+
+
+
+.logoopina {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link2 {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+
+
+.nav-link:hover,
+.nav-button:hover {
+  color: #00c8ff;
+}
+
+/* Botão de sair */
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 8px;
+}
+
+/* Estilo do componente BuscaEmpresa */
+.header-center input[type="text"] {
+  padding: 6px 5px;
+  margin-bottom: 1px;
+  width: 290px;
+  border: 1px solid #ccc;
+  border-color: aquamarine;
+  border-radius: 1px;
+  font-size: 0.95rem;
+}
+
+.header-center button {
+  margin-left: 1px;
+  margin-bottom: 1px;
+  padding: 8px 12px;
+  background-color: #049e26;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.header-center button:hover {
+  background-color: #008fd1;
+}

@@ -1,0 +1,217 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ultimas-reclamacoes h2 {
+  padding-top: 1.2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: #004aad;
+}
+
+.erro {
+  color: red;
+  text-align: center;
+}
+
+.lista-reclamacoes {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  gap: 5px;
+}
+
+.card-reclamacao {
+  background: #fff;
+  text-align: left;
+  align-items: center;
+  padding: 30px 50px;
+  margin-right: 1rem;
+  margin-left: -1rem;
+  border-radius: 5px;
+
+  transition: transform 0.2s;
+}
+
+.card-reclamacao p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.icone-user {
+  color: #5b7ae0;
+  vertical-align: baseline;
+}
+
+.icone-envelope {
+  color: #38d48c;
+  vertical-align: middle;
+}
+
+.icone-msg {
+  color: #ffae00;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.data-reclamacao {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+
+
+
+.barra-busca {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.input-busca {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.icone-busca {
+  position: absolute;
+  font-size: 1.7rem;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #163de7;
+  pointer-events: none;
+}
+
+.botao-ver-mais {
+  background-color: transparent;
+  border: none;
+  color: #004aad;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.cliente {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.assunto {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.feedback {
+  text-transform: capitalize;
+  color: #697e88;
+  font-size: 0.9rem;
+}
+
+.mensagem-texto {
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  .lista-reclamacoes {
+    padding-top: 2rem;
+  }
+
+  .card-reclamacao {
+    padding: 10px;
+  }
+
+  .barra-busca {
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .input-busca {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .icone-busca {
+    font-size: 1.5rem;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ultimas-reclamacoes h2 {
+    font-size: 18px;
+  }
+
+  .card-reclamacao {
+    font-size: 14px;
+  }
+
+  .barra-busca {
+    padding: 10px;
+  }
+
+  .input-busca {
+    font-size: 0.85em;
+    padding: 6px;
+  }
+
+  .icone-busca {
+    font-size: 1.3rem;
+    right: 8px;
+  }
+}
+
+.feedback-e-data {
+  display: flex;
+padding-top: 0;
+padding-bottom: 2rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* CORREÇÃO PARA ÍCONE DO MEGAFONE */
+.icon-megafone {
+  font-size: 2rem;
+  align-items: center;
+  padding-right: 1rem;
+  /* pode ajustar o tamanho do ícone aqui */
+  /* vertical-align: middle; */
+}
+
+.feedback {
+  display: flex;
+  align-items: baseline;
+
+  font-weight: bold;
+  color: #8a8787;
+  gap: 5px;
+}
+
+.data-reclamacao {
+  font-size: 0.7rem;
+  color: #a5a5a5;
+}
