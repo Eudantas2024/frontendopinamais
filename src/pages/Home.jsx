@@ -28,7 +28,8 @@ const Home = () => {
           <form onSubmit={handleBuscaEmpresa}>
             <input
               type="text"
-              placeholder="Pesquise uma Empresa aqui..."
+              
+              placeholder=" 🔍 Pesquise uma Empresa aqui..."
               value={buscaEmpresa}
               onChange={(e) => setBuscaEmpresa(e.target.value)}
               className="input-busca-empresa"
@@ -71,7 +72,7 @@ const Home = () => {
         <h2>Por que usar o Opina+?</h2>
         <div className="benefits-grid">
           <div className="benefit-card">
-            <FaComments className="benefit-icon" />
+            <FaComments className="benefit-icon" /> 
             <h3>Sua Voz Amplificada</h3>
             <p>Envie seus feedbacks diretamente às empresas e seja ouvido.</p>
           </div>
