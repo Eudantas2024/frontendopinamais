@@ -19,10 +19,13 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://backendopinamais.onrender.com", {
+      const response = await fetch("https://backendopinamais.onrender.com/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), senha: senha.trim() }),
+        body: JSON.stringify({
+          email: email.trim(),
+          senha: senha.trim()
+        }),
       });
 
       const data = await response.json();
