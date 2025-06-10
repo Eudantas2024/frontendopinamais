@@ -38,7 +38,7 @@ const Home = () => {
       {/* Seção 1: Banner de Boas-Vindas */}
       <section className="hero-section">
         <div className="hero-content">
-          <img src={'/public/logo6.svg'} alt="Logo Opina+" className="logo11" />
+          <img src={'/logo6.svg'} alt="Logo Opina+" className="logo11" />
           <p className="slogan">Sua voz importa. Conectando clientes e empresas para um futuro melhor.</p>
           <div className="cta-buttons">
             <Link to="/cadastro" className="btn-cta primary">
