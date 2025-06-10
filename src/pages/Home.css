@@ -193,7 +193,7 @@
 /* Caixa de busca sobre a imagem */
 .busca-empresa-flutuante {
   position: absolute;
-  top: 30px;
+  top: 5px;
   right: 50px;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.85);
