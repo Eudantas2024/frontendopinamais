@@ -20,7 +20,7 @@ const Footer = () => {
       {/* Bloco Esquerdo - Logo */}
       <div className="footer-left">
         <Link to="/" className="logo-link">
-          <img className="logoopina" src="./public/logo6.svg" alt="Opina+ Logo" />
+          <img className="logoopina" src="./logo6.svg" alt="Opina+ Logo" />
         </Link>
         <p>© {new Date().getFullYear()} Opina+ <br /> Todos os direitos reservados.</p>
       </div>
