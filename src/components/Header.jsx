@@ -20,7 +20,7 @@ const Header = ({ userType, onLogout }) => {
   {/* Bloco da Esquerda - Logo */}
   <div className="header-left">
     <Link to="/" className="logo-link">
-      <img className="logoopina" src="./public/logo6.svg" alt="Opina+ Logo" />
+      <img className="logoopina" src="./logo6.svg" alt="Opina+ Logo" />
     </Link>
   </div>
 

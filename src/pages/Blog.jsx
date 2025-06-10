@@ -14,7 +14,7 @@ const Blog = () => {
     <div className="container">
       <section className="blog">
         <img src="https://espacocerto.net.br/wp-content/uploads/2021/05/iStock-1206820346.jpg" alt="Descrição da imagem" /><br />
-        <img src={'/public/logo2.svg'} alt="Logo Opina+" className="logo2" />
+        <img src={'/logo2.svg'} alt="Logo Opina+" className="logo2" />
 
         <h2>Quem Somos</h2>
 
@@ -50,7 +50,7 @@ const Blog = () => {
           <strong>Opina+<br />A ponte entre você e as marcas!</strong>
         </p>
 
-        <img src={'/public/logo4.svg'} alt="Logo Opina+" className="logo11" /><br />
+        <img src={'/logo4.svg'} alt="Logo Opina+" className="logo11" /><br />
       </section>
     </div>
   );
