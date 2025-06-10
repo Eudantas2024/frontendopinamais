@@ -21,22 +21,24 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <div className="busca-empresa-flutuante">
-        <form onSubmit={handleBuscaEmpresa}>
-          <input
-            type="text"
-            placeholder="Pesquise uma Empresa aqui..."
-            value={buscaEmpresa}
-            onChange={(e) => setBuscaEmpresa(e.target.value)}
-            className="input-busca-empresa"
-          />
-          <button type="submit" className="botao-ir" disabled={!buscaEmpresa.trim()}>
-            Ir
-          </button>
-        </form>
-      </div>
       {/* Seção 1: Banner de Boas-Vindas */}
       <section className="hero-section">
+        {/* Caixa de busca sobre a imagem */}
+        <div className="busca-empresa-flutuante">
+          <form onSubmit={handleBuscaEmpresa}>
+            <input
+              type="text"
+              placeholder="Pesquise uma Empresa aqui..."
+              value={buscaEmpresa}
+              onChange={(e) => setBuscaEmpresa(e.target.value)}
+              className="input-busca-empresa"
+            />
+            <button type="submit" className="botao-ir" disabled={!buscaEmpresa.trim()}>
+              Ir
+            </button>
+          </form>
+        </div>
+
         <div className="hero-content">
           <img src={'/logo6.svg'} alt="Logo Opina+" className="logo11" />
           <p className="slogan">Sua voz importa. Conectando clientes e empresas para um futuro melhor.</p>
@@ -51,7 +53,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Seção 2: Como Funciona / Nossos Benefícios */}
+      {/* Seção 2: Como Funciona / Últimas Reclamações */}
       <section className="benefits-section">
         <div className="benefits-grid">
           <div className="benefit-card">
@@ -64,7 +66,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Seção 2: Como Funciona / Nossos Benefícios */}
+      {/* Seção 3: Benefícios */}
       <section className="benefits-section">
         <h2>Por que usar o Opina+?</h2>
         <div className="benefits-grid">
@@ -86,7 +88,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Seção 3: Chamada para Ação OTIMIZADA */}
+      {/* Seção 4: Chamada para Ação Final */}
       <section className="cta-bottom-section">
         <div className="cta-card">
           <h3>É Cliente? Sua Opinião Vale muito!</h3>

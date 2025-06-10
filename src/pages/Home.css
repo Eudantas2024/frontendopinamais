@@ -1,17 +1,13 @@
-/* src/pages/Home.css */
-
 .home-container {
   font-family: 'Arial', sans-serif;
   color: #343a40;
   text-align: center;
   background-color: #f8f9fa;
-  /* Cor de fundo suave */
 }
 
-/* Hero Section (Banner de Boas-Vindas) */
+/* Hero Section */
 .hero-section {
-  /* Mude 'imagem_pessoas_opina_plus.jpeg' para o NOME REAL do seu arquivo de imagem na pasta 'public' */
-  background: url('/public/Atendimento-ao-cliente.jpg') no-repeat center center/cover;
+  background: url('/Atendimento-ao-cliente.jpg') no-repeat center center/cover;
   color: white;
   padding: 100px 20px;
   position: relative;
@@ -19,7 +15,6 @@
   justify-content: center;
   align-items: center;
   min-height: 500px;
-  /* Altura mínima para o banner */
 }
 
 .hero-section::before {
@@ -30,7 +25,6 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Overlay escuro */
   z-index: 1;
 }
 
@@ -58,7 +52,6 @@
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  /* Para responsividade */
 }
 
 .btn-cta {
@@ -72,15 +65,12 @@
   align-items: center;
   gap: 10px;
   white-space: nowrap;
-  /* Evita quebra de linha no botão */
 }
 
 .btn-cta.primary {
   background-color: #28a745;
-  /* Verde para clientes */
   color: white;
   border: 2px solid #28a745;
-
 }
 
 .btn-cta.primary:hover {
@@ -98,22 +88,19 @@
 .btn-cta.secondary:hover {
   background-color: white;
   color: #003366;
-  /* Cor do cabeçalho */
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .btn-cta.tertiary {
   background-color: transparent;
   color: #003366;
-  
   border: 2px solid white;
 }
 
 .btn-cta.tertiary:hover {
   background-color: white;
-
   color: #003366;
-  /* Cor do cabeçalho */
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -140,7 +127,6 @@
 
 .benefit-card {
   background-color: #f0f8ff;
-  /* Azul claro */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -173,7 +159,6 @@
 .cta-bottom-section {
   padding: 60px 20px;
   background-color: #e6f0ff;
-  /* Outro tom de azul claro */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -190,7 +175,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Para que os botões fiquem na parte inferior */
 }
 
 .cta-card h3 {
@@ -204,25 +188,24 @@
   color: #555;
   margin-bottom: 30px;
   flex-grow: 1;
-  /* Faz o parágrafo ocupar o espaço restante */
 }
 
-/* Estilos para a div flutuante de busca */
+/* Caixa de busca sobre a imagem */
 .busca-empresa-flutuante {
-  position:fixed;
-  top: 100px;
+  position: absolute;
+  top: 30px;
   right: 50px;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.753);
-  padding: 18px;
-  border-radius: 5px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 12px;
+  border-radius: 6px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
 }
 
 .input-busca-empresa {
-  padding: 12px 12px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
   width: 200px;
@@ -230,7 +213,7 @@
 }
 
 .botao-ir {
-  padding: 12.9px 12px;
+  padding: 12px;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -244,16 +227,13 @@
 }
 
 .logo11 {
-  opacity: 1; /* Ajuste o valor entre 0 (completamente transparente) e 1 (completamente opaco) */
+  opacity: 1;
   height: 150px;
   padding-top: 1rem;
-  
-
 }
 
-/* === RESPONSIVIDADE GERAL === */
+/* === RESPONSIVIDADE === */
 
-/* Para tablets e telas médias (até 1024px) */
 @media (max-width: 1024px) {
   .hero-section {
     padding: 60px 15px;
@@ -269,10 +249,6 @@
     margin-bottom: 30px;
   }
 
-  .cta-buttons {
-    gap: 15px;
-  }
-
   .btn-cta {
     font-size: 1em;
     padding: 12px 25px;
@@ -280,11 +256,6 @@
 
   .benefits-section {
     padding: 40px 15px;
-  }
-
-  .benefits-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 40px;
   }
 
   .benefits-grid {
@@ -311,7 +282,6 @@
   }
 }
 
-/* Para smartphones e telas pequenas (até 768px) */
 @media (max-width: 768px) {
   .hero-section {
     padding: 40px 10px;
@@ -328,53 +298,12 @@
     margin-bottom: 25px;
   }
 
-  .cta-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
   .btn-cta {
-    font-size: 1em;
     padding: 12px 20px;
     width: 100%;
     justify-content: center;
   }
 
-  .benefits-section {
-    padding: 30px 10px;
-  }
-
-  .benefits-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-    max-width: 95%;
-    gap: 20px;
-  }
-
-  .benefit-card {
-    padding: 20px 15px;
-  }
-
-  .benefit-icon {
-    font-size: 2.2em;
-  }
-
-  .cta-bottom-section {
-    padding: 30px 10px;
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .cta-card {
-    max-width: 100%;
-    padding: 25px 15px;
-  }
-
-  /* Busca flutuante vira barra fixa no fluxo */
   .busca-empresa-flutuante {
     position: static;
     margin: 15px auto;
@@ -398,14 +327,12 @@
     flex-shrink: 0;
   }
 
-  /* Logo menor e com padding reduzido */
   .logo11 {
     height: 100px;
     padding-top: 0.5rem;
   }
 }
 
-/* Para telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.8em;
@@ -436,7 +363,7 @@
   .cta-card h3 {
     font-size: 1.4em;
   }
-  
+
   .busca-empresa-flutuante {
     padding: 8px 12px;
     width: 100%;
