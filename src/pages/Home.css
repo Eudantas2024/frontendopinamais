@@ -218,21 +218,25 @@
 }
 
 .input-busca-empresa {
-  padding: 12px;
+  height: 44px; /* Altura fixa para alinhamento */
+  padding: 0 12px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
   width: 200px;
   outline: none;
+  font-size: 16px;
 }
 
 .botao-ir {
-  padding: 10px 12px;
+  height: 44px; /* Mesma altura do input */
+  padding: 0 16px; /* Espaçamento lateral apenas */
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 16px;
 }
 
 .botao-ir:hover {
