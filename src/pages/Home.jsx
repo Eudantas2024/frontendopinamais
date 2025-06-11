@@ -26,10 +26,6 @@ const Home = () => {
         {/* Caixa de busca sobre a imagem */}
         <div className="busca-empresa-flutuante">
           <form onSubmit={handleBuscaEmpresa}>
-            
-            <button type="submit" className="lupinha" disabled={!buscaEmpresa.trim()}>
-            🔍
-            </button>
             <input
               type="text"
               placeholder="  Pesquise uma Empresa aqui..."
@@ -38,7 +34,7 @@ const Home = () => {
               className="input-busca-empresa"
             />
             <button type="submit" className="botao-ir" disabled={!buscaEmpresa.trim()}>
-              Ir
+            🔍Ir
             </button>
           </form>
         </div>
