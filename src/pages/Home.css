@@ -228,15 +228,15 @@
 }
 
 .botao-ir {
-  height: 42px; /* Mesma altura do input */
-  padding: 0  16px; /* Espaçamento lateral apenas */
-  background-color: #4CAF50;
+ 
+  padding: 10x; /* Espaçamento lateral apenas */
+  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius:2px ;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .botao-ir:hover {
