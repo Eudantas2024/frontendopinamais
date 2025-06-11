@@ -229,7 +229,7 @@
 
 .botao-ir {
  
-  padding: 10x; /* Espaçamento lateral apenas */
+  padding: 16px; /* Espaçamento lateral apenas */
   background-color: #007bff;
   color: white;
   border: none;
