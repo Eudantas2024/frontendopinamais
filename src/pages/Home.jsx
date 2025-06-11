@@ -29,7 +29,6 @@ const Home = () => {
             <p className='lupinha'>🔍</p>
             <input
               type="text"
-              
               placeholder="  Pesquise uma Empresa aqui..."
               value={buscaEmpresa}
               onChange={(e) => setBuscaEmpresa(e.target.value)}

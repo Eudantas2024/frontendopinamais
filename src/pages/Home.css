@@ -191,7 +191,12 @@
 }
 
 .lupinha {
-  font-size: 18px; /* Aumenta o tamanho do texto e da lupa */
+  font-size: 24px; /* Aumenta o tamanho do texto e da lupa */
+}
+
+.busca-empresa-flutuante form {
+  display: flex;
+  align-items: center;
 }
 
 
