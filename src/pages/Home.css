@@ -190,9 +190,17 @@
   flex-grow: 1;
 }
 
-.lupinha {
-  font-size: 25px; /* Aumenta o tamanho do texto e da lupa */
+.busca-empresa-flutuante form {
+  display: flex;
+  align-items: center;
 }
+
+.icone-lupa {
+  color: #4CAF50; /* ou azul, como preferir */
+  font-size: 22px;
+  margin-right: 8px;
+}
+
 
 
 /* Caixa de busca sobre a imagem */

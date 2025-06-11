@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaComments, FaHandshake, FaChartLine, FaBullhorn, FaUserPlus, FaBuilding } from 'react-icons/fa';
+import { FaComments, FaSearch, FaHandshake, FaChartLine, FaBullhorn, FaUserPlus, FaBuilding } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
@@ -26,15 +26,16 @@ const Home = () => {
         {/* Caixa de busca sobre a imagem */}
         <div className="busca-empresa-flutuante">
           <form onSubmit={handleBuscaEmpresa}>
+            <FaSearch className="icone-lupa" />
             <input
               type="text"
-              placeholder="  Pesquise uma Empresa aqui..."
+              placeholder=" <strong2>🔍</strong2> Pesquise uma Empresa aqui..."
               value={buscaEmpresa}
               onChange={(e) => setBuscaEmpresa(e.target.value)}
               className="input-busca-empresa"
             />
             <button type="submit" className="botao-ir" disabled={!buscaEmpresa.trim()}>
-            🔍Ir
+            Ir
             </button>
           </form>
         </div>
