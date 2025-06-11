@@ -190,6 +190,11 @@
   flex-grow: 1;
 }
 
+.lupinha {
+  font-size: 18px; /* Aumenta o tamanho do texto e da lupa */
+}
+
+
 /* Caixa de busca sobre a imagem */
 .busca-empresa-flutuante {
   position: absolute;

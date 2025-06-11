@@ -26,10 +26,11 @@ const Home = () => {
         {/* Caixa de busca sobre a imagem */}
         <div className="busca-empresa-flutuante">
           <form onSubmit={handleBuscaEmpresa}>
+            <p className='lupinha'>🔍</p>
             <input
               type="text"
               
-              placeholder=" 🔍 Pesquise uma Empresa aqui..."
+              placeholder="  Pesquise uma Empresa aqui..."
               value={buscaEmpresa}
               onChange={(e) => setBuscaEmpresa(e.target.value)}
               className="input-busca-empresa"
