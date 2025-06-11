@@ -222,14 +222,14 @@
   padding: 0 12px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
-  width: 200px;
+  width: 300px;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .botao-ir {
   height: 44px; /* Mesma altura do input */
-  padding: 0 16px; /* Espaçamento lateral apenas */
+  padding: 2px  16px; /* Espaçamento lateral apenas */
   background-color: #4CAF50;
   color: white;
   border: none;
