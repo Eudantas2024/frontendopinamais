@@ -29,7 +29,7 @@ const Home = () => {
             <FaSearch className="icone-lupa" />
             <input
               type="text"
-              placeholder=" <strong2>🔍</strong2> Pesquise uma Empresa aqui..."
+              placeholder=" Pesquise uma Empresa aqui..."
               value={buscaEmpresa}
               onChange={(e) => setBuscaEmpresa(e.target.value)}
               className="input-busca-empresa"
