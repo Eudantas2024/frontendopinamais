@@ -195,13 +195,6 @@
 }
 
 
-.busca-empresa-flutuante form {
-  display: flex;
-  align-items: center;
-  padding: 1px;
-}
-
-
 /* Caixa de busca sobre a imagem */
 .busca-empresa-flutuante {
   position: absolute;
