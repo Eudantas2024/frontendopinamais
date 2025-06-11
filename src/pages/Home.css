@@ -228,7 +228,7 @@
 }
 
 .botao-ir {
-  height: 43px; /* Mesma altura do input */
+  height: 42px; /* Mesma altura do input */
   padding: 0  16px; /* Espaçamento lateral apenas */
   background-color: #4CAF50;
   color: white;
