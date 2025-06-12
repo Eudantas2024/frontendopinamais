@@ -50,7 +50,7 @@ const Painel = () => {
       }}
     >
       <h2
-       
+
       >
         Olá, {feedbacks[0]?.username || 'usuário'}! Seja bem-vindo à sua área exclusiva
       </h2>
@@ -58,6 +58,26 @@ const Painel = () => {
       <h2>
         Painel do Cliente
       </h2>
+      <button
+        type="button"
+        onClick={() => navigate('/')}
+        style={{
+          backgroundColor: '#28a745',
+          color: '#fff',
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          fontSize: '16px',
+          cursor: 'pointer',
+          marginTop: '20px',
+          transition: 'background-color 0.3s ease'
+        }}
+        onMouseOver={(e) => e.target.style.backgroundColor = '#218838'}
+        onMouseOut={(e) => e.target.style.backgroundColor = '#28a745'}
+      >
+        Clique aqui para página inicial
+      </button>
+
 
       <p
         style={{

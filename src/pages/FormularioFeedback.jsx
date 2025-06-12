@@ -136,6 +136,26 @@ export default function FormReclamacao() {
         <button type="submit" className="btn-enviar">
           Enviar Reclamação
         </button>
+        <button
+          type="button"
+          onClick={() => navigate('/')}
+          style={{
+            backgroundColor: '#28a745',
+            color: '#fff',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '5px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            marginTop: '20px',
+            transition: 'background-color 0.3s ease'
+          }}
+          onMouseOver={(e) => e.target.style.backgroundColor = '#218838'}
+          onMouseOut={(e) => e.target.style.backgroundColor = '#28a745'}
+        >
+          Clique aqui para página inicial
+        </button>
+
 
         {showSuccessRepeat && (
           <div className="mensagem sucesso repeat">
