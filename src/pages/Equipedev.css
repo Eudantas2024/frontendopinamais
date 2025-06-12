@@ -1,8 +1,7 @@
 .container {
   max-width: 700px;
-  display: flex;
   margin: 40px auto;
-  padding: 30px 90px;
+  padding: 30px 30px;
   background:#f0f8ff;
   border-radius: 10px;
   color: #007bff;
@@ -10,7 +9,7 @@
   text-align: center;
 }
 
-.container p{
+/* .container p{
   text-align: center;
 }
-
+ */
