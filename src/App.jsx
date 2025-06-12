@@ -16,6 +16,7 @@ import Home from './pages/Home'; // Página inicial
 import UltimasReclamacoes from './pages/UltimasReclamacoes'; // Página para listar reclamações aprovadas
 import Blog from './pages/Blog'; // Página "Quem Somos"
 import Contato from './pages/Contato'; // ✅ Página de Contato
+import Equipedev from './pages/Equipedev'; // ✅ Página da Equipe
 
 // Componente para proteger rotas de cliente
 const VerificarCliente = ({ userType, children }) => {
@@ -67,6 +68,9 @@ function App() {
 
         {/* ✅ Página de Contato */}
         <Route path="/contato" element={<Contato />} />
+
+            {/* ✅ Página de Contato */}
+            <Route path="/equipedev" element={<Equipedev />} />
 
         {/* Página pública: últimas reclamações aprovadas */}
         <Route path="/reclamacoes" element={<UltimasReclamacoes />} />

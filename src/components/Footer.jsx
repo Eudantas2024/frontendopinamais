@@ -11,6 +11,7 @@ import {
   FaLock,
   FaHome,
   FaBook,
+  FaUsers,
   FaBullhorn
 } from 'react-icons/fa';
 
@@ -31,6 +32,7 @@ const Footer = () => {
         <Link to="/blog" className="footer-link"><FaBook /> Quem Somos</Link>
         <Link to="/reclamacoes" className="footer-link"><FaBullhorn /> Feedbacks</Link>
         <Link to="/contato" className="footer-link"><FaEnvelope /> Contato</Link>
+        <Link to="/equipedev" className="footer-link"><FaUsers /> Equipe de Desenvolvimento</Link>
         
       </div>
 
