@@ -1,36 +1,15 @@
-.contato-container {
+.container {
   max-width: 500px;
   margin: 40px auto;
   padding: 30px 90px;
-  background: white;
+  background: rgb(168, 195, 221);
   border-radius: 10px;
   color: #2a80d1;
   box-shadow: 0 0 15px #ccc;
-   text-align: center;
+  text-align: center;
 }
 
-.contato-info {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-  text-align: left;
+.container p{
+  text-align: center;
 }
 
-.contato-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.2rem;
-  color: #2a80d1;
-}
-
-.contato-icon {
-  font-size: 1.8rem;
-  color: #2ad138;
-}
-
-.cadastro-container2 {
-
-}
