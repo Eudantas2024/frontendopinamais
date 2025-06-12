@@ -75,7 +75,7 @@ const Painel = () => {
         onMouseOver={(e) => e.target.style.backgroundColor = '#218838'}
         onMouseOut={(e) => e.target.style.backgroundColor = '#28a745'}
       >
-        Clique aqui para página inicial
+        Clique aqui para voltar para a página inicial
       </button>
 
 

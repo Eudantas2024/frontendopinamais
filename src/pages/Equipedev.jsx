@@ -4,7 +4,7 @@ import { FaUsers } from 'react-icons/fa';
 
 const Equipedev = () => {
   return (
-    <div className="container">
+    <div className="container2">
       <div>
         <h1>Projeto Integrador Opina +</h1>
         <p>O Projeto Integrador Opina + , lê-se "opina mais" é o projeto de encerramento do curso Técnico de Informática do Senac Campinas em junho de 2025.</p>
