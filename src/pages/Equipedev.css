@@ -20,10 +20,19 @@
   font-size: 1em;
   color: #555;
   line-height: 1.5;
-}
-
-
-/* .container p{
   text-align: center;
 }
- */
+
+.equipe-icon {
+  font-size: 3rem;
+ 
+}
+
+.equipe-info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  text-align: left;
+}
