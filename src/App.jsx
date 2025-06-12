@@ -69,7 +69,7 @@ function App() {
         {/* ✅ Página de Contato */}
         <Route path="/contato" element={<Contato />} />
 
-            {/* ✅ Página de Contato */}
+            {/* ✅ Página da Equipe */}
             <Route path="/equipedev" element={<Equipedev />} />
 
         {/* Página pública: últimas reclamações aprovadas */}

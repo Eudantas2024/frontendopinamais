@@ -2,7 +2,7 @@ import React from 'react';
 import './Equipedev.css';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
-const Contato = () => {
+const Equipedev = () => {
   return (
     <div className="contato-container">
       <h1>Projeto Intregador Opina +</h1>
