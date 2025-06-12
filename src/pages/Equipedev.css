@@ -9,6 +9,20 @@
   text-align: center;
 }
 
+
+.container h2 {
+  color: #003366;
+  font-size: 2.2em;
+  margin-bottom: 50px;
+}
+
+.container p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+
 /* .container p{
   text-align: center;
 }
