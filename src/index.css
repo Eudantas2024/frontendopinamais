@@ -9,20 +9,21 @@ html, body, #root {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* altura total da tela */
   font-family: sans-serif;
   background-color: #f2f2f2;
+  margin: 0;
 }
 
-/* Área principal do conteúdo */
 main {
-  flex: 1;
+  flex: 1 0 auto; /* permite o main crescer e ocupar espaço */
   padding: 20px;
   background: white;
   margin: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
-/* Container de login com estilo claro */
 .login-container {
   background-color: #f8f9fa;
   margin: 20px;
@@ -30,13 +31,12 @@ main {
   padding: 20px;
 }
 
-/* Títulos */
 h2 {
   color: #003366;
 }
 
-/* Footer opcional (caso queira reforçar o estilo) */
 footer {
+  flex-shrink: 0; /* evita encolher */
   background-color: #003366;
   color: white;
   text-align: center;

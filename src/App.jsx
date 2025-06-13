@@ -48,67 +48,69 @@ function App() {
     <Router>
       <Header userType={userType} onLogout={handleLogout} />
 
-      <Routes>
-        {/* Página Inicial */}
-        <Route path="/" element={<Home />} />
+      <main>
+        <Routes>
+          {/* Página Inicial */}
+          <Route path="/" element={<Home />} />
 
-        {/* Autenticação */}
-        <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
-        <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
+          {/* Autenticação */}
+          <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
 
-        {/* Login do Administrador */}
-        <Route path="/admin" element={<AdminLogin />} />
+          {/* Login do Administrador */}
+          <Route path="/admin" element={<AdminLogin />} />
 
-        {/* Painel do Administrador */}
-        <Route path="/paineladmin" element={<PainelAdmin />} />
+          {/* Painel do Administrador */}
+          <Route path="/paineladmin" element={<PainelAdmin />} />
 
-        {/* Blog */}
-        <Route path="/blog" element={<Blog />} />
+          {/* Blog */}
+          <Route path="/blog" element={<Blog />} />
 
-        {/* ✅ Página de Contato */}
-        <Route path="/contato" element={<Contato />} />
+          {/* Página de Contato */}
+          <Route path="/contato" element={<Contato />} />
 
-            {/* ✅ Página da Equipe */}
-            <Route path="/equipedev" element={<Equipedev />} />
+          {/* Página da Equipe */}
+          <Route path="/equipedev" element={<Equipedev />} />
 
-        {/* Página pública: últimas reclamações aprovadas */}
-        <Route path="/reclamacoes" element={<UltimasReclamacoes />} />
+          {/* Página pública: últimas reclamações aprovadas */}
+          <Route path="/reclamacoes" element={<UltimasReclamacoes />} />
 
-        {/* Rotas protegidas para clientes */}
-        <Route
-          path="/novo-feedback"
-          element={
-            <VerificarCliente userType={userType}>
-              <FormularioFeedback />
-            </VerificarCliente>
-          }
-        />
-        <Route
-          path="/meus-feedbacks"
-          element={
-            <VerificarCliente userType={userType}>
-              <PainelCliente />
-            </VerificarCliente>
-          }
-        />
+          {/* Rotas protegidas para clientes */}
+          <Route
+            path="/novo-feedback"
+            element={
+              <VerificarCliente userType={userType}>
+                <FormularioFeedback />
+              </VerificarCliente>
+            }
+          />
+          <Route
+            path="/meus-feedbacks"
+            element={
+              <VerificarCliente userType={userType}>
+                <PainelCliente />
+              </VerificarCliente>
+            }
+          />
 
-        {/* Painel da empresa - apenas se logado como empresa */}
-        {userType === 'empresa' && (
-          <Route path="/painel-empresa" element={<DashboardEmpresa />} />
-        )}
+          {/* Painel da empresa - apenas se logado como empresa */}
+          {userType === 'empresa' && (
+            <Route path="/painel-empresa" element={<DashboardEmpresa />} />
+          )}
 
-        {/* Página 404 - rota não encontrada */}
-        <Route
-          path="*"
-          element={
-            <div style={{ padding: '50px', textAlign: 'center', fontSize: '1.5em', color: '#dc3545' }}>
-              <h2>404 - Página Não Encontrada</h2>
-              <p>A URL que você tentou acessar não existe.</p>
-            </div>
-          }
-        />
-      </Routes>
+          {/* Página 404 - rota não encontrada */}
+          <Route
+            path="*"
+            element={
+              <div style={{ padding: '50px', textAlign: 'center', fontSize: '1.5em', color: '#dc3545' }}>
+                <h2>404 - Página Não Encontrada</h2>
+                <p>A URL que você tentou acessar não existe.</p>
+              </div>
+            }
+          />
+        </Routes>
+      </main>
 
       <Footer userType={userType} onLogout={handleLogout} />
     </Router>
