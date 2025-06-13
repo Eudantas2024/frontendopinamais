@@ -68,7 +68,7 @@ function UltimasReclamacoes() {
 
   if (loading) {
     return (
-      <div className="container">
+      <div className="container" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <div className="ultimas-reclamacoes">
           <h2>Feedbacks Publicados</h2>
           <p style={{ fontSize: '1.2em', color: '#333', marginTop: '20px' }}>
@@ -78,6 +78,7 @@ function UltimasReclamacoes() {
       </div>
     );
   }
+
 
   return (
     <div className="container">
