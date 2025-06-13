@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
-import XIcon from '../components/XIcon';
 import {
   FaFacebook,
   FaInstagram,
@@ -34,7 +33,7 @@ const Footer = () => {
         <Link to="/reclamacoes" className="footer-link"><FaBullhorn /> Feedbacks</Link>
         <Link to="/contato" className="footer-link"><FaEnvelope /> Contato</Link>
         <Link to="/equipedev" className="footer-link"><FaUsers /> Equipe de Desenvolvimento</Link>
-
+        
       </div>
 
       {/* Bloco Direito - Redes Sociais em linha */}
@@ -43,9 +42,7 @@ const Footer = () => {
         <div className="social-icons">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebook /></a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <XIcon size={20} color="white" />
-          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaTwitter /></a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedin /></a>
           <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="social-icon"><FaWhatsapp /></a>
         </div><br />
