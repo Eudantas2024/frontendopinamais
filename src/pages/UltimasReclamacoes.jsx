@@ -13,19 +13,23 @@ import './UltimasReclamacoes.css';
 function UltimasReclamacoes() {
   const location = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+  // Busca inicial do parâmetro na URL
   const queryParams = new URLSearchParams(location.search);
   const buscaInicial = queryParams.get('busca') || '';
 
+  // Estados
   const [reclamacoes, setReclamacoes] = useState([]);
   const [erro, setErro] = useState('');
   const [busca, setBusca] = useState(buscaInicial);
   const [mensagemExpandida, setMensagemExpandida] = useState(null);
-  const [loading, setLoading] = useState(true); // Estado para loading
+  const [loading, setLoading] = useState(true);
 
+  // Sempre rola para o topo quando o componente montar
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Busca as reclamações aprovadas ao montar o componente
   useEffect(() => {
     fetch('https://backendopinamais.onrender.com/api/reclamacoes/aprovadas')
       .then((res) => {
@@ -34,14 +38,22 @@ function UltimasReclamacoes() {
       })
       .then((dados) => {
         setReclamacoes(dados);
-        setLoading(false);  // Finaliza loading quando dados chegam
+        setLoading(false);
       })
       .catch((err) => {
         setErro(err.message);
-        setLoading(false);  // Finaliza loading mesmo se erro
+        setLoading(false);
       });
   }, []);
 
+  // Quando terminar o loading, rola para o topo da página
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
+
+  // Filtra reclamações com base na busca
   const reclamacoesFiltradas = reclamacoes.filter((rec) => {
     const buscaLower = busca.toLowerCase();
     return (
@@ -50,6 +62,7 @@ function UltimasReclamacoes() {
     );
   });
 
+  // Mapeamento dos tipos e cores dos feedbacks
   const tiposFeedback = {
     problema: 'Crítica',
     sugestao: 'Sugestão',
@@ -66,9 +79,19 @@ function UltimasReclamacoes() {
     outros: '#BDB76B',     // marrom
   };
 
+  // Exibição enquanto carrega
   if (loading) {
     return (
-      <div className="container" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div
+        className="container"
+        style={{
+          minHeight: '80vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <div className="ultimas-reclamacoes">
           <h2>Feedbacks Publicados</h2>
           <p style={{ fontSize: '1.2em', color: '#333', marginTop: '20px' }}>
@@ -79,7 +102,7 @@ function UltimasReclamacoes() {
     );
   }
 
-
+  // Renderização principal
   return (
     <div className="container">
       <div className="ultimas-reclamacoes">
@@ -127,7 +150,6 @@ function UltimasReclamacoes() {
 
               return (
                 <div key={rec._id} className="card-reclamacao">
-
                   <div className="feedback-e-data">
                     <p className="feedback">
                       <FaBullhorn
@@ -163,11 +185,7 @@ function UltimasReclamacoes() {
 
                   <p className="mensagem-texto">
                     <FaCommentDots className="icone-msg" /> <strong>Mensagem:</strong> <br />
-                    {mensagemExpandida === rec._id
-                      ? rec.mensagem
-                      : rec.mensagem.length > 500
-                        ? rec.mensagem.slice(0, 500) + '...'
-                        : rec.mensagem}
+                    {mensagemFormatada}
                   </p>
 
                   {rec.mensagem.length > 500 && (
@@ -218,7 +236,6 @@ function UltimasReclamacoes() {
                     <p></p>
                   )}
                 </div>
-
               );
             })
           )}
