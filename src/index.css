@@ -15,13 +15,14 @@ body {
 }
 
 main {
-  flex: 1 0 auto; /* permite o main crescer e ocupar espaço */
-  padding: 0;
+  padding-top: 60px; /* igual à altura do header fixo */
+  flex: 1 0 auto;
   background: white;
   margin: 0;
   border-radius: 10px;
   box-sizing: border-box;
 }
+
 
 .login-container {
   background-color: #f8f9fa;
