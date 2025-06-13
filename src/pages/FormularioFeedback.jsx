@@ -134,7 +134,7 @@ export default function FormReclamacao() {
         </div>
 
         <button type="submit" className="btn-enviar">
-          Enviar Reclamação
+          Enviar
         </button>
         <button
         type="button"
@@ -147,7 +147,7 @@ export default function FormReclamacao() {
           borderRadius: '5px',
           fontSize: '16px',
           cursor: 'pointer',
-          marginTop: '20px',
+          marginTop: '3px',
           transition: 'background-color 0.3s ease'
         }}
         onMouseOver={(e) => e.target.style.backgroundColor = '#218838'}
