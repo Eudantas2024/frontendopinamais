@@ -1,25 +1,44 @@
-body {
-  font-family: sans-serif;
+/* Garante que a aplicação ocupe toda a altura da tela */
+html, body, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background: #f2f2f2  ;
 }
 
+/* Layout em coluna: header, main (cresce), footer */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Área principal do conteúdo */
 main {
+  flex: 1;
   padding: 20px;
-  background: white  ;
+  background: white;
   margin: 20px;
   border-radius: 10px;
 }
 
+/* Container de login com estilo claro */
 .login-container {
-  background-color: #f8f9fa ; 
+  background-color: #f8f9fa;
   margin: 20px;
   border-radius: 10px;
+  padding: 20px;
 }
 
-
-
+/* Títulos */
 h2 {
   color: #003366;
+}
+
+/* Footer opcional (caso queira reforçar o estilo) */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
 }

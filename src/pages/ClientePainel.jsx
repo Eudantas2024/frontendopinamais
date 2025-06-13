@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaUser, FaEnvelope, FaCommentDots } from 'react-icons/fa';
 
-// Função auxiliar para verificar se o arquivo é imagem
-const isImageFile = (filename) => {
-  return /\.(jpg|jpeg|png|gif|bmp|webp)$/i.test(filename);
-};
+// ... código anterior omitido por brevidade
 
 const Painel = () => {
+  const navigate = useNavigate(); // <-- Aqui está o que faltava
   const [feedbacks, setFeedbacks] = useState([]);
   const [erro, setErro] = useState('');
 
