@@ -58,6 +58,9 @@ const Painel = () => {
       <h2>
         Painel do Cliente
       </h2>
+      <button type="submit" className="btn-enviar">
+        Enviar Reclamação
+      </button>
       <button
         type="button"
         onClick={() => navigate('/')}
@@ -77,6 +80,7 @@ const Painel = () => {
       >
         Clique aqui para voltar para a página inicial
       </button>
+
 
 
       <p
