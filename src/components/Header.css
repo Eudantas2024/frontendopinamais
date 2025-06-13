@@ -11,10 +11,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem; /* padding horizontal menor */
-  height: 70px;
+  height: 60px;
   box-sizing: border-box;
  
-  max-width: 100%; /* não ultrapassa a viewport */
 }
 
 
