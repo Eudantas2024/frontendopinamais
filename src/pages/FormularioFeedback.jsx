@@ -110,7 +110,7 @@ export default function FormReclamacao() {
             onChange={(e) => setMensagem(e.target.value)}
             maxLength={1500}
           />
-          <p>{mensagem.length} / 1500 caracteres</p>
+          <p className="length">{mensagem.length} / 1500 caracteres</p>
         </div>
 
         <div className="form-group">
