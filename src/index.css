@@ -17,9 +17,9 @@ body {
 
 main {
   flex: 1 0 auto; /* permite o main crescer e ocupar espaço */
-  padding: 20px;
+  padding: 0;
   background: white;
-  margin: 20px;
+  margin: 0;
   border-radius: 10px;
   box-sizing: border-box;
 }
