@@ -21,7 +21,8 @@
   color: #555;
   line-height: 1.5;
   text-align: center;
-  width: 80%;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .equipe-icon {
