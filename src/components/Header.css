@@ -10,8 +10,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 8rem;
-  height: 60px; /* ou a altura que seu header tiver */
+  padding: 0 2rem; /* padding horizontal menor */
+  height: 60px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* para prevenir scroll horizontal */
+  max-width: 100vw; /* não ultrapassa a viewport */
 }
 
 
