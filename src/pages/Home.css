@@ -1,9 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
 .main-home {
   font-family: 'Arial', sans-serif;
   color: #343a40;
   text-align: center;
   background-color: #f8f9fa;
+
+  border: none;   /* Remove qualquer borda */
+  outline: none;  /* Remove qualquer contorno */
+  box-shadow: none; /* Remove sombra que pode parecer borda */
 }
+
 
 /* Hero Section */
 .hero-section {
