@@ -1,6 +1,7 @@
 .main-header {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   background-image: linear-gradient(135deg, #10c218, #007bff);
@@ -10,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 8rem;
-  height: 80px; /4 ou a altura que seu header tiver */
+  height: 60px; /* ou a altura que seu header tiver */
 }
 
 
@@ -36,7 +37,7 @@
 .header-right {
   flex: 0;
   gap: 10px;
-  padding-left: 1rem;
+  padding-left: 5rem;
   white-space: nowrap;
 }
 
