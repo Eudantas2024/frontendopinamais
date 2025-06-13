@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  padding-top: 50px; /* igual à altura do header fixo */
+  padding-top: 40px; /* igual à altura do header fixo */
   flex: 1 0 auto;
   background: white;
   margin: 0;
