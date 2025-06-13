@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home-container">
+    <main className="main-home">
       {/* Seção 1: Banner de Boas-Vindas */}
       <section className="hero-section">
         {/* Caixa de busca sobre a imagem */}
@@ -35,7 +35,7 @@ const Home = () => {
               className="input-busca-empresa"
             />
             <button type="submit" className="botao-ir" disabled={!buscaEmpresa.trim()}>
-            Ir
+              Ir
             </button>
           </form>
         </div>
@@ -111,7 +111,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

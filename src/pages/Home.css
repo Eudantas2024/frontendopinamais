@@ -1,4 +1,4 @@
-.home-container {
+.main-home {
   font-family: 'Arial', sans-serif;
   color: #343a40;
   text-align: center;
@@ -201,8 +201,6 @@
   margin-right: 8px;
 }
 
-
-
 /* Caixa de busca sobre a imagem */
 .busca-empresa-flutuante {
   position: absolute;
@@ -394,5 +392,6 @@
   .botao-ir {
     padding: 6px 10px;
     margin-left: 5px;
+    font-size: 12px;
   }
 }
