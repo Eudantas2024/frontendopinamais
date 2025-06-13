@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Equipedev.css';
 import { FaUsers } from 'react-icons/fa';
 
 const Equipedev = () => {
+  // Garante que a página role para o topo ao montar
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="container2">
       <div>
@@ -12,7 +17,7 @@ const Equipedev = () => {
           <FaUsers className="equipe-icon" />
           <h3>Equipe</h3>
         </div>
-        <p>Eudantas,  Douglas, Simone e Felipe.</p>
+        <p>Eudantas, Douglas, Simone e Felipe.</p>
       </div>
     </div>
   );

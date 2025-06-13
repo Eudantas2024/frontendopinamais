@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Contato.css';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contato = () => {
+  // Faz a rolagem ir para o topo ao montar a página
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contato-container">
       <h1>Fale Conosco</h1>
@@ -18,7 +23,7 @@ const Contato = () => {
         <div className="contato-item">
           <FaPhoneAlt className="contato-icon" />
           <span>Telefone: </span>
-          <span>(19) 99999-9999</span> {/* Telefone fictício */}
+          <span>(19) 99999-9999</span>
         </div>
 
         <div className="contato-item">
