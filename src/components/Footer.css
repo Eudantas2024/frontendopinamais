@@ -72,3 +72,20 @@
   border-radius: 10px;
   box-shadow: 0 0 15px #ccc;
 }
+
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  color: white;
+  font-size: 20px; /* para os react-icons */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #00c8ff; /* ou outra cor de destaque */
+}
