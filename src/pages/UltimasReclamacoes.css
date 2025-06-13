@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.ultimas-reclamacoes {
+padding-top: 2rem;
+}
+
 .ultimas-reclamacoes h2 {
   padding-top: 1.2rem;
   padding-bottom: 1rem;
