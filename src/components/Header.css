@@ -13,7 +13,7 @@
   padding: 0 1.5rem; /* padding horizontal menor */
   height: 70px;
   box-sizing: border-box;
-  overflow-x: hidden; /* para prevenir scroll horizontal */
+ 
   max-width: 100%; /* não ultrapassa a viewport */
 }
 
