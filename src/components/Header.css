@@ -11,12 +11,9 @@
   background-image: linear-gradient(135deg, #10c218, #007bff);
   z-index: 1000;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
-
-
-  /* Novo: limitar largura e centralizar */
-
+  max-width: 1200px;
+  margin: 0 auto; /* centraliza horizontalmente */
 }
-
 
 /* Três colunas horizontais */
 .header-left,
@@ -30,14 +27,15 @@
 .header-center {
   flex: 1;
   justify-content: center;
+  min-width: 0; /* importante para flexbox e truncar conteúdo */
 }
 
 .header-left {
-  flex: 0;
+  flex: 0 0 auto;
 }
 
 .header-right {
-  flex: 0;
+  flex: 0 0 auto;
   gap: 10px;
   padding-left: 1rem;
   white-space: nowrap;
@@ -47,8 +45,6 @@
 .logo-link {
   text-decoration: none;
 }
-
-
 
 .logoopina {
   width: 300px;
@@ -67,6 +63,7 @@
   gap: 3px;
   font-size: 0.95rem;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-link2 {
@@ -79,8 +76,6 @@
   font-size: 1.5rem;
   transition: color 0.2s ease;
 }
-
-
 
 .nav-link:hover,
 .nav-button:hover {
@@ -98,6 +93,7 @@
   align-items: center;
   gap: 5px;
   margin-left: 8px;
+  white-space: nowrap;
 }
 
 /* Estilo do componente BuscaEmpresa */
@@ -105,8 +101,7 @@
   padding: 6px 5px;
   margin-bottom: 1px;
   width: 290px;
-  border: 1px solid #ccc;
-  border-color: aquamarine;
+  border: 1px solid aquamarine;
   border-radius: 1px;
   font-size: 0.95rem;
 }
@@ -126,4 +121,78 @@
 
 .header-center button:hover {
   background-color: #008fd1;
+}
+
+/* ===================
+   RESPONSIVIDADE
+=================== */
+
+@media (max-width: 1024px) {
+  .main-header {
+    padding: 0.5rem 2rem;
+  }
+  .logoopina {
+    width: 220px;
+  }
+  .header-center input[type="text"] {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .header-left,
+  .header-center,
+  .header-right {
+    width: 100%;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .header-right {
+    flex-wrap: wrap;
+    gap: 8px;
+    white-space: normal;
+  }
+
+  .logoopina {
+    width: 180px;
+  }
+
+  .header-center input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    margin: 4px 6px;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoopina {
+    width: 140px;
+  }
+  .header-center input[type="text"] {
+    max-width: 100%;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    margin: 3px 4px;
+  }
+  .nav-button {
+    font-size: 0.85rem;
+    margin-left: 4px;
+  }
 }
