@@ -6,7 +6,7 @@
   align-items: center;
   padding: 0rem 5rem;
   flex-wrap: wrap;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-image: linear-gradient(135deg, #10c218, #007bff);
   z-index: 1000;
