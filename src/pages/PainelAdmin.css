@@ -27,7 +27,7 @@
   /* Inclui padding na largura total */
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
   text-align: center;
   position: relative;
 
