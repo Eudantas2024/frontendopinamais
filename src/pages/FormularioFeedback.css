@@ -159,7 +159,7 @@
 
 /* Botão de Enviar */
 .btn-enviar {
-  background-color: var(--cor-sucesso);
+  background-color: #007bff;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -177,7 +177,7 @@
 }
 
 .btn-enviar:hover:not(:disabled) {
-  background-color: #218838;
+  background-color: #3d77c8;
   transform: translateY(-2px);
 }
 
