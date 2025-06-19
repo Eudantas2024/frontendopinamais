@@ -1,16 +1,7 @@
-.cadastro-container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #ccc;
-}
-
 .cadastro-container2 {
   max-width: 500px;
   margin: 40px auto;
-  padding: 30px 90px;
+  padding: 50px 30px 150px 30px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 0 15px #ccc;

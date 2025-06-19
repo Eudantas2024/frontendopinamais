@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PainelAdmin.css";
+import API_URL from '../services/api';
+
 
 const PainelAdmin = () => {
   const [reclamacoesPendentes, setReclamacoesPendentes] = useState([]);
@@ -37,7 +39,7 @@ const PainelAdmin = () => {
 
   const carregarReclamacoesPendentes = async () => {
     try {
-      const res = await fetch("https://backendopinamais.onrender.com/api/reclamacoes/pendentes", {
+      const res = await fetch( `${API_URL}/api/reclamacoes/pendentes`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -54,7 +56,7 @@ const PainelAdmin = () => {
 
   const carregarReclamacoesAprovadas = async () => {
     try {
-      const res = await fetch("https://backendopinamais.onrender.com/api/reclamacoes/aprovadas", {
+      const res = await fetch(`${API_URL}/api/reclamacoes/aprovadas`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) {
@@ -68,7 +70,7 @@ const PainelAdmin = () => {
 
   const aprovarReclamacao = async (id) => {
     try {
-      const res = await fetch(`https://backendopinamais.onrender.com/api/reclamacoes/aprovar/${id}`, {
+      const res = await fetch(`${API_URL}/api/reclamacoes/aprovar/${id}`, {
         method: "PUT",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -89,7 +91,7 @@ const PainelAdmin = () => {
 
   const excluirReclamacao = async (id) => {
     try {
-      const res = await fetch(`https://backendopinamais.onrender.com/api/reclamacoes/${id}`, {
+      const res = await fetch(`${API_URL}/api/reclamacoes/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

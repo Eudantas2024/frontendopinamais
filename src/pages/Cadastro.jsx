@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ✅ IMPORTADO
 import './Cadastro.css';
+import API_URL from '../services/api'; // ajuste o caminho se necessário
+
 
 function Cadastro() {
   const navigate = useNavigate(); // ✅ USADO
@@ -30,7 +32,8 @@ function Cadastro() {
     e.preventDefault();
     if (!validar()) return;
 
-    fetch("https://backendopinamais.onrender.com/api/consumidor/register", {
+    fetch(`${API_URL}/api/consumidor/register`, {
+
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -62,7 +65,7 @@ function Cadastro() {
   };
 
   return (
-    <div className="cadastro-container">
+    <div className="cadastro-container2">
       <h2>📝 Cadastro de Usuário</h2>
 
       {sucesso && <p className="mensagem sucesso">Cadastro realizado com sucesso! ✅</p>}

@@ -3,6 +3,8 @@ import { useState } from 'react';
 import './LoginEmpresa.css';
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaBuilding } from 'react-icons/fa';
+import API_URL from '../services/api';
+
 
 function Login({ onLoginSuccess }) {
   const [form, setForm] = useState({ email: '', senha: '' });
@@ -32,8 +34,10 @@ function Login({ onLoginSuccess }) {
 
     try {
       const rota = tipoLogin === 'cliente'
-        ? 'https://backendopinamais.onrender.com/api/consumidor/login'
-        : 'https://backendopinamais.onrender.com/api/empresa/login'; // Ajuste conforme o backend
+      ? `${API_URL}/api/consumidor/login`
+      : `${API_URL}/api/empresa/login`;
+    
+    
 
       const resposta = await fetch(rota, {
         method: 'POST',

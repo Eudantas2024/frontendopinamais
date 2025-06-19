@@ -1,5 +1,5 @@
 
-.container {
+.container6 {
   font-family: 'Arial', sans-serif;
  
   width: 900px;
@@ -7,12 +7,13 @@
   margin: auto;
   color: #343a40;
   text-align: center;
-  background-color: #f8f9fa;
+  flex-direction: column;
   /* Cor de fundo suave */
 }
 
-.blog{
+.blog2{
   padding: 1rem 4rem;
+  flex-direction: column;
 }
 
 img{
@@ -38,4 +39,26 @@ p {
   padding: 1rem;
   width: 300px;
   margin-bottom: 0;
+}
+
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+
+  .container6{
+    width: 100%;
+    width: 768px;
+    padding: 1rem 5rem;
+    text-align: center;
+    padding: 1px 1px 1px 35px;
+    flex-direction: column;
+  }
+
+
+  .blog2{
+    width: 100%;
+    flex-direction: column;
+
+  }
+
 }

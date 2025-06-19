@@ -58,7 +58,7 @@
   transform: scale(1.2);
 }
 
-.logoopina {
+.logoopina3 {
   width: 185px;
   margin-bottom: 10px;
 }
@@ -71,4 +71,15 @@
   background: white;
   border-radius: 10px;
   box-shadow: 0 0 15px #ccc;
+}
+
+
+@media (max-width: 768px) {
+
+  .main-footer {
+    width: 100%;
+  }
+
+
+
 }

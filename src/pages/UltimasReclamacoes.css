@@ -133,7 +133,7 @@ padding-top: 2rem;
 /* Responsivo */
 @media (max-width: 768px) {
   .container {
-    max-width: 100%;
+    width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0 20px;
@@ -144,6 +144,7 @@ padding-top: 2rem;
   }
 
   .card-reclamacao {
+    width: 100%;
     padding: 10px;
   }
 

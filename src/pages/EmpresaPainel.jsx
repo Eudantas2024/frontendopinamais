@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaUser, FaEnvelope, FaCommentDots } from 'react-icons/fa';
+import API_URL from '../services/api'; // ajuste o caminho conforme necessário
+
 
 const Painel = () => {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -10,7 +12,8 @@ const Painel = () => {
       try {
         const token = localStorage.getItem("token"); // JWT armazenado localmente
 
-        const response = await fetch("https://backendopinamais.onrender.com/api/reclamacoes/minhas", {
+        const response = await fetch(`${API_URL}/api/reclamacoes/minhas`, {
+
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -131,13 +134,13 @@ const Painel = () => {
               <strong>Registrado em:</strong>{' '}
               {fb.createdAt
                 ? new Date(fb.createdAt).toLocaleString('pt-BR', {
-                    day: '2-digit',
-                    month: '2-digit',
-                    year: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                  })
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  second: '2-digit',
+                })
                 : 'Data não disponível'}
             </div>
 
@@ -148,7 +151,7 @@ const Painel = () => {
                   {fb.anexos.map((anexo, index) => (
                     <li key={index}>
                       <a
-                        href={`https://backendopinamais.onrender.com/uploads/${anexo.filename}`}
+                        href={`${API_URL}/uploads/${anexo.filename}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

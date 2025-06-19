@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  
   border: none;
 }
 
@@ -261,56 +262,9 @@ body {
 
 /* === RESPONSIVIDADE === */
 
-@media (max-width: 1024px) {
-  .hero-section {
-    padding: 60px 15px;
-    min-height: 400px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.8em;
-  }
-
-  .hero-content .slogan {
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-  }
-
-  .btn-cta {
-    font-size: 1em;
-    padding: 12px 25px;
-  }
-
-  .benefits-section {
-    padding: 40px 15px;
-  }
-
-  .benefits-grid {
-    max-width: 90%;
-    gap: 25px;
-  }
-
-  .benefit-card {
-    padding: 20px;
-  }
-
-  .benefit-icon {
-    font-size: 2.5em;
-  }
-
-  .cta-bottom-section {
-    padding: 40px 15px;
-    gap: 30px;
-  }
-
-  .cta-card {
-    padding: 30px;
-    max-width: 350px;
-  }
-}
-
 @media (max-width: 768px) {
   .hero-section {
+    width: 100%;
     padding: 40px 10px;
     min-height: 300px;
     flex-direction: column;
@@ -360,50 +314,3 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.8em;
-  }
-
-  .hero-content .slogan {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .btn-cta {
-    font-size: 0.95em;
-    padding: 10px 15px;
-  }
-
-  .benefits-section h2 {
-    font-size: 1.3em;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.3em;
-  }
-
-  .benefit-icon {
-    font-size: 2em;
-  }
-
-  .cta-card h3 {
-    font-size: 1.4em;
-  }
-
-  .busca-empresa-flutuante {
-    padding: 8px 12px;
-    width: 100%;
-    max-width: none;
-  }
-
-  .input-busca-empresa {
-    padding: 6px 10px;
-  }
-
-  .botao-ir {
-    padding: 6px 10px;
-    margin-left: 5px;
-    font-size: 12px;
-  }
-}
