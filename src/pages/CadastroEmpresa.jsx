@@ -1,8 +1,6 @@
 import { useState } from 'react'
 // Linha CORRIGIDA: Agora ele procura por 'Cadastro.css' no MESMO DIRETÓRIO
-import './CadastroEmpresa.css'
-import API_URL from '../services/api'; // ajuste o caminho se necessário
-
+import './CadastroEmpresa.css' 
 
 function CadastroEmpresa() {
   const [form, setForm] = useState({
@@ -28,41 +26,40 @@ function CadastroEmpresa() {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validar()) return;
+  e.preventDefault();
+  if (!validar()) return;
 
-    fetch(`${API_URL}/api/empresa/register`, {
-
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: form.nome,
-        email: form.email,
-        senha: form.senha
-      })
+  fetch("https://backendopinamais.onrender.com/api/empresa/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: form.nome,
+      email: form.email,
+      senha: form.senha
     })
-      .then(res => {
-        if (!res.ok) {
-          return res.json().then(err => { throw err });
-        }
-        return res.json();
-      })
-      .then(data => {
-        console.log(data);
-        setSucesso(true);
-        setErros({});
-        setForm({ nome: '', email: '', senha: '' });
-      })
-      .catch(error => {
-        console.error("Erro no cadastro:", error);
-        setErros({ geral: error.error || "Erro ao realizar cadastro." });
-        setSucesso(false);
-      });
-  };
+  })
+    .then(res => {
+      if (!res.ok) {
+        return res.json().then(err => { throw err });
+      }
+      return res.json();
+    })
+    .then(data => {
+      console.log(data);
+      setSucesso(true);
+      setErros({});
+      setForm({ nome: '', email: '', senha: '' });
+    })
+    .catch(error => {
+      console.error("Erro no cadastro:", error);
+      setErros({ geral: error.error || "Erro ao realizar cadastro." });
+      setSucesso(false);
+    });
+};
 
 
-
-
+ 
+  
 
   return (
     <div className="cadastro-container">

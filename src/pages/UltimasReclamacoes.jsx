@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import API_URL from '../services/api';
 import {
   FaUser,
   FaEnvelope,
@@ -32,7 +31,7 @@ function UltimasReclamacoes() {
 
   // Busca as reclamações aprovadas ao montar o componente
   useEffect(() => {
-    fetch(`${API_URL}/api/reclamacoes/aprovadas`)
+    fetch('https://backendopinamais.onrender.com/api/reclamacoes/aprovadas')
       .then((res) => {
         if (!res.ok) throw new Error('Erro ao buscar reclamações.');
         return res.json();

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cadastro.css'; // Reutilizando o CSS do Cadastro
-import API_URL from '../services/api'; // ajuste o caminho se necessário
-
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -21,8 +19,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${API_URL}/api/admin/login`, {
-
+      const response = await fetch("https://backendopinamais.onrender.com/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

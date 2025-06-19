@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaEnvelope, FaCommentDots } from 'react-icons/fa';
-import API_URL from '../services/api'; // ajuste o caminho se necessário
-
 
 // ... código anterior omitido por brevidade
 
@@ -16,8 +14,7 @@ const Painel = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const response = await fetch(`${API_URL}/api/reclamacoes/minhas`, {
-
+        const response = await fetch("https://backendopinamais.onrender.com/api/reclamacoes/minhas", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -60,7 +57,7 @@ const Painel = () => {
       <h2>
         Painel do Cliente
       </h2>
-
+     
       <button
         type="button"
         onClick={() => navigate('/')}

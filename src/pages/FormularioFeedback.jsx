@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./FormularioFeedback.css";
-import API_URL from "../services/api"; // ← usamos o caminho relativo correto
 
 export default function FormReclamacao() {
   const fileInputRef = useRef(null);
@@ -32,7 +31,7 @@ export default function FormReclamacao() {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`${API_URL}/api/reclamacoes/upload`, {
+      const response = await fetch("https://backendopinamais.onrender.com/api/reclamacoes/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
